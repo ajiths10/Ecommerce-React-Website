@@ -1,0 +1,31 @@
+.imageClass{
+    width: 90px;
+    border-radius: 12px;
+    margin-left: 10px;
+}
+
+.priceList{
+    margin-left: 70px;
+    position: relative;
+    font-weight: bold;
+}
+
+.inputQuantity{
+    text-align: center;
+    width: 30px;
+    height: 25px;
+    margin-left: 40px;
+    font-weight: bold;
+    border: 1px solid rgb(0, 204, 255);
+    border-radius: 8%;
+}
+
+.removeBtn{
+    background-color:tomato;
+    border: 0;
+    color: white;
+    font-weight: bold;
+    margin-left: 18px;
+    height: 30px;
+    border-radius: 8%;
+}

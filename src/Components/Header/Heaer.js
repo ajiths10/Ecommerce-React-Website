@@ -1,6 +1,6 @@
 import './Header.css';
 
-const Header = () => {
+const Header = (props) => {
     return(
         <div className='header'>
             <div>
@@ -8,7 +8,7 @@ const Header = () => {
             <label> Store</label>
             <label> About</label>
             </div>
-            <button className='cart-button' >Cart</button>
+            <button className='cart-button' onClick={props.onClick} >Cart</button>
         </div>
     )
 };

@@ -35,7 +35,7 @@ const MusicHome = () => {
       ];
       let num =1;
      const itemList = productsArr.map((element)=>{
-         console.log(element)
+         
           return <ItemList title={element.title} price={element.price} URL={element.imageUrl} num={num++}/>
       })
 

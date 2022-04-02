@@ -21,5 +21,7 @@ text-align: center;
 }
 
 .priceList{
-    
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
