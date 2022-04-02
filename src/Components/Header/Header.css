@@ -1,0 +1,17 @@
+.header {
+    background-attachment: fixed;
+    background-color: black;
+    color: white;
+    align-items: center;
+    text-align: center;
+    height: 3rem;
+}
+
+.cart-button{
+    background-color: black;
+    color: white;
+    border-width: 2px;
+    border-color: aqua;
+    margin-left: 90%;
+
+}

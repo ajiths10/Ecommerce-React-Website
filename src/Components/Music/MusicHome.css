@@ -1,0 +1,20 @@
+.mainBody{
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+
+.musiclist{
+    align-items: center;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 55rem;
+
+    margin-left: 21%;
+
+}
