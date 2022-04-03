@@ -10,13 +10,13 @@ const Header = (props) => {
     return(
         <div className='header'>
             <div className='titlediv' >
-            <NavLink to='' className='titlelabels'> Home</NavLink>
+            <NavLink to='./Home' className='titlelabels'> Home</NavLink>
             <NavLink to='./Store' className='titlelabels'> Store</NavLink>
             <NavLink to='./About' className='titlelabels'> About</NavLink>
-            </div>
             <div>
             <button className='cart-button' onClick={props.onClick} >Cart</button>
             {CTX.count}
+            </div> 
             </div>
         </div>
     )

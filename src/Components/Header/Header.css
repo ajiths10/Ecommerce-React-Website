@@ -6,7 +6,6 @@
     text-align: center;
     height: 3rem;
 }
-
 .cart-button{
     background-color: black;
     color: white;
@@ -17,22 +16,62 @@
     border: 2px solid #56CCF2;
     
 }
-
-.titlediv{
-    display: flex;
-    padding: 10px;
-    font-size: 18px;
-    font-weight: 200;
-    justify-content: center;
-    list-style-type: none;
-    top: 0%;
-    background: black;
-    width: 60%;
-    z-index: 1;
-    margin-left: 290px;
+.header {
+    background-attachment: fixed;
+    background-color: black;
     color: white;
+    align-items: center;
+    text-align: center;
+    height: 3rem;
 }
-
+.cart-button{
+    background-color: black;
+    color: white;
+    border-width: 2px;
+    border-color: aqua;
+    margin-left: 90%;
+    border-radius: 7px;
+    border: 2px solid #56CCF2;
+    
+}
+.titlediv{
+    .header {
+        background-attachment: fixed;
+        background-color: black;
+        color: white;
+        align-items: center;
+        text-align: center;
+        height: 3rem;
+    }
+    .cart-button{
+        background-color: black;
+        color: white;
+        border-width: 2px;
+        border-color: aqua;
+        margin-left: 90%;
+        border-radius: 7px;
+        border: 2px solid #56CCF2;
+        
+    }
+    .titlediv{    
+        font-size: 18px;
+        font-weight: 200;
+    }
+    .titlelabels{
+        cursor: pointer;
+        margin-left: 40px;
+        align-content: center;
+        color: white;
+        font-weight: bold;
+    }
+}
+.titlelabels{
+    cursor: pointer;
+    margin-left: 40px;
+    align-content: center;
+    color: white;
+    font-weight: bold;
+}
 .titlelabels{
     cursor: pointer;
     margin-left: 40px;

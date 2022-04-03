@@ -1,0 +1,75 @@
+.homeHeader{
+    background-color: #777;
+    margin-top: -20px;
+    height: 200px;
+}
+
+.LatestBtn{
+    display: block;
+    border: 1px solid #56CCF2;
+    padding: 15px 30px;
+    font-size: 23px;
+    font-weight: 200;
+    margin: 10px auto;
+    background: inherit;
+    cursor: pointer;
+    color: white;
+}
+
+.palyBtn{
+    cursor: pointer;
+    display: block;
+    border: 2px solid #56CCF2;
+    border-radius: 50%;
+    padding: 20px;
+    font-size: 30px;
+    font-weight: 200;
+    margin: 20px auto;
+    background: inherit;
+    color: #56CCF2;
+
+}
+
+.homeBodyh2{
+    font-family: "Metal Mania";
+    text-align: center;
+    padding: 20px;
+    font-size: 30px;
+}
+
+.itemList{
+    display: flex;
+    border-bottom: 1px solid black;
+    padding: 10px;
+}
+.itemDate{
+    width: 12%;
+}
+
+.itemPlace{
+    width: 25%;
+    color: #777;
+}
+
+.itemName{
+    width: 53%;
+    color: #777;
+}
+
+.buyBtn{
+    width: 20%;
+    background: #56CCF2;
+    color: white;
+    border: none;
+    padding: 7px;
+    border-radius: 5px;
+    font-weight: 700;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.homeBody{
+    width: 70%;
+    text-align: center;
+    align-content: center;
+    margin-left: 15%;
+}
