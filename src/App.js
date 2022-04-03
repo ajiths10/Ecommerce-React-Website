@@ -7,6 +7,7 @@ import MainHeading from "./Components/MainHeading/MainHeading";
 import MusicHome from "./Pages/Music/MusicHome";
 import About from "./Pages/About/About";
 import CartProvider from "./Store/CartProvider";
+import Footer from "./Components/Footer/Footer";
 
 function App() {
   const [Cartstate, setCartState] = useState(false);
@@ -30,6 +31,7 @@ function App() {
       <Route path='/Store' >
         <MusicHome />
       </Route>
+      <Footer />
     </CartProvider>
   );
 }

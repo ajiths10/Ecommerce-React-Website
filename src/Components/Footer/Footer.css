@@ -1,0 +1,19 @@
+.footer{
+    display: flex;
+    margin-top: 40px;
+    padding: 20px;
+    background: #56CCF2;
+}
+
+.footername{
+    text-align: left;
+    color: white;
+    width: 50%;
+    font-size: 50px;
+    font-weight: bold;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-left: 80px;
+    height: 50px;
+}
+
