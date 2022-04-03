@@ -1,13 +1,15 @@
-import React, { Fragment, useState } from "react";
+import React, { useState } from "react";
 import Cart from "./Components/Cart/Cart";
 
 import Header from "./Components/Header/Heaer";
 import MainHeading from "./Components/MainHeading/MainHeading";
 import MusicHome from "./Components/Music/MusicHome";
+import CartProvider from "./Store/CartProvider";
+
 
 function App() {
   const [Cartstate, setCartState]= useState(false);
-
+  
   const cartHandler = () =>{
     setCartState(true);
   }
@@ -16,13 +18,14 @@ function App() {
     setCartState(false);
   }
 
+
   return (
-    <Fragment>
+    <CartProvider>
       { Cartstate && <Cart onClick={cartFalseHandler} />}
       <Header onClick={cartHandler} />
       <MainHeading />
       <MusicHome />
-    </Fragment>
+    </CartProvider>
   );
 }
 

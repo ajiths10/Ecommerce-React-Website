@@ -1,6 +1,13 @@
+import React, { useContext, } from 'react';
+import CartContext from '../../Store/Cart--context';
 import './ItemList.css';
 
 const ItemList = (props) => {
+const CTX = useContext(CartContext);
+
+const BtnHandler = ()=>{
+  CTX.AddtoButtonHandler(props);
+}
 
   return <div>
   <div className="indLIst">
@@ -9,10 +16,9 @@ const ItemList = (props) => {
       </div>
       <div className='priceAndButton'>
       <label className='priceList' > {`$${props.price}`}</label>
-      <button className='listButton' > ADD TO CART</button>
+      <button className='listButton' onClick={BtnHandler} > ADD TO CART</button>
       </div>
       </div>
-  
 };
 
 export default ItemList;
