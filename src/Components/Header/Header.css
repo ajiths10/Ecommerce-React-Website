@@ -17,3 +17,27 @@
     border: 2px solid #56CCF2;
     
 }
+
+.titlediv{
+    display: flex;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: 200;
+    justify-content: center;
+    list-style-type: none;
+    position: fixed;
+    top: 0%;
+    background: black;
+    width: 60%;
+    z-index: 1;
+    margin-left: 290px;
+    color: white;
+}
+
+.titlelabels{
+    cursor: pointer;
+    margin-left: 40px;
+    align-content: center;
+    color: white;
+    font-weight: bold;
+}

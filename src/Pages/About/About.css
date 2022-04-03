@@ -1,0 +1,20 @@
+.h1Class{
+    font-family: "Metal Mania";
+    text-align: center;
+    padding: 20px;
+    font-size: 30px;
+}
+
+.imgClass{
+    float: left;
+    margin: 20px 50px;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+}
+
+.pClass{
+    font-size: 20px;
+    margin: 18px;
+    color: #777;
+}
