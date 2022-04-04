@@ -1,0 +1,47 @@
+.TextArea{
+    border-color: rgb(230, 228, 228);
+    border-radius: 1px;
+    border-style:double;
+    border-radius: .9rem;
+    width: 550px;
+    height: 35px;
+}
+.maindiv{
+    margin-top: 5px;
+    align-items: center;
+    text-align: center;
+    font-weight: bold;
+    margin-left: 25%;
+    background-color: aliceblue;
+    width: 50%;
+    margin-top: 20px;
+    border-radius: 2rem;
+    height: 320px;
+}
+
+.BTN{
+    margin-left:210px ;
+    margin-top: 20px;
+    font: inherit;
+    cursor: pointer;
+    background: #3e0090;
+    border: 1px solid #230052;
+    color: white;
+    padding: 0.75rem 2rem;
+    border-radius: 20px;
+}
+.BTN:hover{
+    background-color: #2d01bf;
+    cursor: pointer;
+}
+
+.mainform{
+    margin-left: 10%;
+    margin-top: 30px;
+    text-align: left;
+}
+
+.labelform{
+    margin-top: 15px;
+    
+}
