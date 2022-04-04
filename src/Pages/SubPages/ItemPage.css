@@ -1,0 +1,120 @@
+.maindivitemPage{
+    background-color: rgb(255, 255, 255);
+    margin-left: 10%;
+    width: 80%;
+}
+.h3item{
+    padding-left: 10px;
+    font-size: 20px;
+}
+
+.HeadingitemPage{
+    font-weight: bold;
+    margin-left: 3%;
+    padding-top: 1.5%;
+}
+
+.ImageitemPage{
+    background-color: hsla(224, 100%, 50%, 0.037);
+    width: 500px;
+    margin-left: 5%;
+    height: 500px;
+}
+
+.ContentHadnleitemPage{
+    background-color: rgb(255, 255, 255);
+    width: 600px;
+    margin-left: 50%;
+    margin-top: -40%;
+    height: 500px;;
+}
+.imageitem{
+    margin-left: 20%;
+    padding-top: 100px;
+    align-content: center;  
+}
+
+.smallnameitem{
+    color: rgba(0, 0, 0, 0.481);
+    padding-left: 8px;
+    padding-top: 10px;
+}
+.colortextnameitem{
+    color:rgb(19, 142, 19);
+    padding-left: 8px;
+    padding-top: 0px;
+}
+
+.pricedivitem{
+    padding-top: 10px;
+    font-size: 17px;
+    margin-left: 8px;
+}
+.amountitem{
+    font-size: 26px;
+    font-weight: 3000;
+}
+.strikeitem{
+    color: rgb(136, 136, 136);
+}
+.ratingitem{
+    padding-top: 10px;
+    padding-left: 10px;
+}
+.Buttonratingitem{
+    background-color: rgb(65, 163, 68);
+    border: 0ch;
+    border-radius: 2rem;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+}
+.ratingcountitem{
+    color: rgb(152, 145, 145);
+    padding-left: 10px;
+}
+.smallheadingtitem{
+    padding-left: 10px;
+    padding-top: 20px;
+    font-weight: bold;
+}
+.pitem{
+    font-size: 16px;
+
+}
+
+.deliverCheckDiv{
+    padding-left: 15px;
+    padding-top: 20px;
+    
+}
+.deliverChecklabel{
+    color: rgb(198, 193, 193);
+}
+.deliverCheckinput{
+    border-top : 1px;
+    border-left: 1px;
+    border-right: 1px;
+    border-radius: .09rem;
+    background-color: rgba(246, 242, 242, 0.296);
+    height: 30px;
+    width: 220px;
+    color: antiquewhite;
+    text-align: center;
+    display: inline;
+    
+}
+.deliverCheckbtninput{
+    padding-top: 5px;
+}
+.deliverCheckibtn{
+    border-top : 1px;
+    border-left: 1px;
+    border-right: 1px;
+    text-align: center;
+    background-color: aliceblue;
+    cursor: pointer;
+    height: 30px;
+    width: 70px;
+    
+}

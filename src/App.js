@@ -10,6 +10,7 @@ import CartProvider from "./Store/CartProvider";
 import Footer from "./Components/Footer/Footer";
 import Home from "./Pages/Home/Home";
 import ContactForm from "./Pages/ContactUs/ContactForm";
+import ItemPage from "./Pages/SubPages/ItemPage";
 
 function App() {
   const [Cartstate, setCartState] = useState(false);
@@ -27,6 +28,7 @@ function App() {
       {Cartstate && <Cart onClick={cartFalseHandler} />}
       <Header onClick={cartHandler} />
       <MainHeading />
+       <ItemPage />
       <Route path="/About">
         <About />
       </Route>
