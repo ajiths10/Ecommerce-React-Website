@@ -1,10 +1,15 @@
 import React, { useState } from "react";
+import { useParams } from "react-router-dom";
+
 import "./ItemPage.css";
 import Reviews from "./Reviews";
 
 const ItemPage = (props) => {
 
   const [reviewState, setreview] = useState(false);
+  const params = useParams();
+  console.log(params.productId);
+
 
   const reviewHandler = (event) =>{
     event.preventDefault();

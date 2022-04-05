@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Route } from "react-router-dom";
+import { Route , Switch } from "react-router-dom";
 import Cart from "./Components/Cart/Cart";
 
 import Header from "./Components/Header/Heaer";
@@ -28,19 +28,27 @@ function App() {
       {Cartstate && <Cart onClick={cartFalseHandler} />}
       <Header onClick={cartHandler} />
       <MainHeading />
-       <ItemPage />
+      <Switch>
       <Route path="/About">
         <About />
       </Route>
-      <Route path="/Store">
+
+      <Route path="/Store" exact>
         <MusicHome />
       </Route>
+
       <Route path="/Home">
         <Home />
       </Route>
+
       <Route path="/contactus">
         <ContactForm />
       </Route>
+
+      <Route path="/Store/:productId">
+        <ItemPage />
+      </Route>
+      </Switch>
       <Footer />
     </CartProvider>
   );
