@@ -29,9 +29,14 @@
     height: 500px;;
 }
 .imageitem{
-    margin-left: 20%;
+    margin-left: 30%;
     padding-top: 100px;
-    align-content: center;  
+    margin-top: -500px;  
+}
+.imageitem:hover{
+    transition: 0.5s all ease-in-out;
+    transform: scale(1.9);
+    margin-left: 70%;
 }
 
 .smallnameitem{
@@ -116,5 +121,117 @@
     cursor: pointer;
     height: 30px;
     width: 70px;
+    
+}
+.multipleImageitemPage{
+    background-color:aliceblue;
+    height: 500px;
+    width: 100px;
+    padding-top: 20px;
+}
+
+.indImageitemPage{
+    height: 100px;
+    padding-top: 20px;
+    padding-left: 10px;
+}
+.servicesDiv{
+    margin-left: 60%;
+    margin-top: -50px;
+}
+.serviceslabel{
+    font-size: 15px;
+    color: rgb(192, 188, 188);   
+}
+
+.servicesitems{
+    padding-top: 10px;
+    font-size: 14px;
+    text-align: left;
+}
+.servicesitemsspan{
+    color: rgb(19, 218, 19);
+}
+.ProductdetailsMaindiv{
+    background-color: rgb(246, 248, 247);
+    height: 100px;
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 30px;
+}
+.ProductdetailsProductdiv{
+    padding-left: 40px;
+    padding-top: 35px;   
+}
+
+.Productdetailsplusdiv{
+    text-align: right;
+    padding-right: 40px;
+    margin-top: -20px;
+    font-size: 24px;
+    color: rgb(205, 215, 215);
+}
+.reviewMaindiv{
+    background-color: rgb(246, 248, 247);
+    height: 600px;
+}
+
+.reviewratingitem{
+    margin-left: 140px;
+    margin-top: -25px;
+}
+.reviewButtonratingitem{
+    background-color: rgb(65, 163, 68);
+    border: 0ch;
+    border-radius: 2rem;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    height: 30px;
+    width: 50px;
+}
+
+.ReviwRatingcountitem{
+    color: rgb(152, 145, 145);
+    padding-left: 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.ReviwProductBTN{
+    border: none;
+    background-color: rgb(83, 160, 255);
+    width: 100px;
+    height: 30px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+}
+.ReviwProductBTNDiv{
+    margin-left: 33%;
+    margin-top: -28px;
+}
+
+.Productdetailsplusbutton{
+    border: none;
+    height: 30px;
+    width: 30px;
+    text-align: center;
+    color: rgb(195, 191, 185);
+    font-size: 26px;
+    background-color: transparent;
+    font-weight: bold;
+    margin-top: -15px;
+}
+
+.Reviewbody{
+    background-color: rgb(247, 251, 249);
+    padding-top: 40px;
+    height:500px;
+    
+}
+
+.CallClass{
+    
     
 }

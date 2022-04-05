@@ -1,8 +1,9 @@
 .footer{
-    display: flex;
+    display:flex;
     margin-top: 40px;
     padding: 20px;
     background: #56CCF2;
+    
 }
 
 .footername{
