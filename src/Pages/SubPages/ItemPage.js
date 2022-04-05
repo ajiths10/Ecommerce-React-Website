@@ -1,8 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import "./ItemPage.css";
 import Reviews from "./Reviews";
 
 const ItemPage = (props) => {
+
+  const [reviewState, setreview] = useState(false);
+
+  const reviewHandler = (event) =>{
+    event.preventDefault();
+    console.log('Review activate');
+    setreview((previousState)=>{ return !previousState});
+  };
+
   return (
     <div>
       <div className="maindivitemPage">
@@ -155,12 +164,12 @@ const ItemPage = (props) => {
             </div>
             <div className="Productdetailsplusdiv">
               {" "}
-              <button className="Productdetailsplusbutton">+</button>{" "}
+              <button className="Productdetailsplusbutton" onClick={reviewHandler} >+</button>{" "}
             </div>
           </div>
         </div>
         <div >
-          <Reviews className="Reviewbody" />
+          { reviewState && <Reviews className="Reviewbody" />}
         </div>
       </div>
     </div>
