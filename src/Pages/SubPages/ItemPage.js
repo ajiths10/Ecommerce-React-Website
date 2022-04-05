@@ -6,7 +6,7 @@ import Reviews from "./Reviews";
 
 const ItemPage = (props) => {
 
-  const [reviewState, setreview] = useState(false);
+  const [reviewState, setreview] = useState(true);
   const params = useParams();
   console.log(params.productId);
 
