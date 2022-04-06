@@ -6,13 +6,15 @@ import "./Cart.css";
 const Cart = (props) => {
 const CTX = useContext(CartContext);
 
+
   const cartListItems = CTX.items.map((element) => {
-      console.log(element);
+      
     return<CartList
       title={element.title}
       price={element.price}
       url={element.URL}
-      quantity={element.quantity}
+      quantity={element.quantity} 
+      id={element.id}
     />;
   });
   
@@ -30,7 +32,7 @@ const CTX = useContext(CartContext);
       </div>
       <div>{cartListItems}</div>
       <div className="totalAmount">
-          <span > Total:$23.99</span>
+          <span >Total Amount:{CTX.total} </span>
           <button className="purchaseBtn" >PURCHASE</button>
       </div>
     </div>
