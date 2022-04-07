@@ -25,7 +25,7 @@ const AuthForm = () => {
     try{
     if (isLogin) {
       setLoading(true);
-         const res =  await    fetch(
+         const res =  await fetch(
         "https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyDYvgMIyWWmOzJ3IXis-uRWEguL3xNOPww",
         {
           method: "POST",
@@ -44,7 +44,9 @@ const AuthForm = () => {
         emailInputRef.current.value = "";
         passwordInputRef.current.value = "";
         const data = await res.json();
+        console.log(data)
          localStorage.setItem('JWTTOKEN' , data.idToken);
+         localStorage.setItem('userID' , data.localId);
          CTX.loginStateCall(true);
          history.replace('/Store');
       }else{

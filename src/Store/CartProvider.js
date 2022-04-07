@@ -73,6 +73,7 @@ const loginStateHandler = (value) =>{
         removeHandler: removeBtnHandler,
         loginStateCall: loginStateHandler, //isLogin State function
         isLogin: loginState,  //State
+        
     };
 
   return <CartContext.Provider value={cartContent} >{props.children}</CartContext.Provider>;

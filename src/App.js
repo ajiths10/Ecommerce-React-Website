@@ -17,6 +17,7 @@ function App() {
   const [Cartstate, setCartState] = useState(false);
   const CTX = useContext(CartContext);
 
+  
   const cartHandler = () => {
     setCartState(true);
   };
@@ -41,7 +42,7 @@ function App() {
 
        <Route path="/Store" exact>
         {isLogin && <MusicHome />}
-        {!isLogin&& <Redirect to='/userLogin' /> }
+        {!isLogin && <Redirect to='/userLogin' /> }
       </Route>
 
       <Route path="/Home">
@@ -60,7 +61,8 @@ function App() {
         <AuthForm />
       </Route>
       <Route path='*' exact>
-        <Redirect to='/userlogin'></Redirect>
+        {!isLogin && <Redirect to='/userlogin'></Redirect>}
+        {isLogin && <Redirect to='/Store'></Redirect>}
       </Route>
       </Switch>
       <Footer />
