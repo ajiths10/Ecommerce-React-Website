@@ -41,8 +41,8 @@ function App() {
       </Route>
 
        <Route path="/Store" exact>
-        {isLogin && <MusicHome />}
-        {!isLogin && <Redirect to='/userLogin' /> }
+        {CTX.isLogin && <MusicHome />}
+        {!CTX.isLogin && <Redirect to='/userLogin' /> }
       </Route>
 
       <Route path="/Home">
@@ -57,12 +57,14 @@ function App() {
         { isLogin && <ItemPage  />}
         {!isLogin && <Redirect to='/userLogin' /> }
       </Route>
-      <Route path='/userlogin'>
+
+       {!isLogin && <Route path='/userlogin'>
         <AuthForm />
-      </Route>
+      </Route>}
+
       <Route path='*' exact>
-        {!isLogin && <Redirect to='/userlogin'></Redirect>}
         {isLogin && <Redirect to='/Store'></Redirect>}
+        {!isLogin && <Redirect to='/userlogin'></Redirect>}
       </Route>
       </Switch>
       <Footer />

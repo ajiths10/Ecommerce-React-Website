@@ -34,7 +34,7 @@
     border: 2px solid #56CCF2;
     
 }
-.titlediv{
+
     .header {
         background-attachment: fixed;
         background-color: black;
@@ -43,16 +43,7 @@
         text-align: center;
         height: 3rem;
     }
-    .cart-button{
-        background-color: black;
-        color: white;
-        border-width: 2px;
-        border-color: aqua;
-        margin-left: 90%;
-        border-radius: 7px;
-        border: 2px solid #56CCF2;
-        
-    }
+
     .titlediv{    
         font-size: 18px;
         font-weight: 200;
@@ -64,7 +55,7 @@
         color: white;
         font-weight: bold;
     }
-}
+
 .titlelabels{
     cursor: pointer;
     margin-left: 40px;
@@ -79,3 +70,53 @@
     color: white;
     font-weight: bold;
 }
+.logout-BTN{
+   
+    margin-left: 1400px;
+    margin-top: -30px;
+    padding-top: 20px;
+    width: 100px;
+    
+    height: 60px;
+    
+}
+.cart-button{
+    background-color: black;
+    color: white;
+    border-width: 2px;
+    border-color: aqua;
+    margin-left: 90%;
+    border-radius: 7px;
+    border: 2px solid #56CCF2;
+    height: 30px;
+    width: 80px;
+    font-weight: bold; 
+}
+.cart-button:hover{
+background-color: #56CCF2;
+color: black;
+text-align: center;
+}
+
+.cartClassbtn{   
+    margin-top: -40px;
+    height: 30px;
+    width: 1400px;
+}
+.logout-Button{
+    height: 30px;
+    width: 85px;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    border-width: 2px;
+    border-radius: 7px;
+    border-color: aqua;
+    border: 2px solid #56CCF2;
+}
+.logout-Button:hover{
+    background-color: #56CCF2;
+    color: black;
+    text-align: center;
+    }
