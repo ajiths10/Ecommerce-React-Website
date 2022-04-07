@@ -4,6 +4,7 @@ import CartContext from "./Cart--context";
 const CartProvider = (props) => {
 const [items,UpdateNewItems] = useState([]) ;
 const [amountState, setAmount] = useState('');
+const [isLogin, setLogin] = useState(false);
 
 let newSubArray = [...items];
 
@@ -46,6 +47,16 @@ let newSubArray = [...items];
     }
 useEffect(totalAmountHandler,[items]); 
 
+const isLoginHandler=() => {
+    const localData = localStorage.getItem('JWTTOKEN')
+    if(localData.trim() !== ''){
+        setLogin(true);
+    }else{
+        setLogin(false);
+    }
+}
+useEffect(isLoginHandler,[])
+
     const cartContent ={
         message: 'Hello world',
         AddtoButtonHandler: AddToCart,
@@ -53,6 +64,7 @@ useEffect(totalAmountHandler,[items]);
         count:items.length,
         total:amountState,
         removeHandler: removeBtnHandler,
+        isLogin: isLogin,
     };
 
   return <CartContext.Provider value={cartContent} >{props.children}</CartContext.Provider>;

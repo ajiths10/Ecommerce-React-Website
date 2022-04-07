@@ -43,7 +43,7 @@ const AuthForm = () => {
         emailInputRef.current.value = "";
         passwordInputRef.current.value = "";
         const data = await res.json();
-        // localStorage.setItem('JWTTOKEN' , data.idToken);
+         localStorage.setItem('JWTTOKEN' , data.idToken);
          history.replace('/Store');
       }else{
         const data = await res.json();
@@ -71,7 +71,7 @@ const AuthForm = () => {
      emailInputRef.current.value = "";
      passwordInputRef.current.value = "";
      const data = await res.json();
-    //  localStorage.setItem('JWTTOKEN' , data.idToken);
+      //localStorage.setItem('JWTTOKEN' , data.idToken);
       // history.replace('/Store');
    }else{
      const data = await res.json();
