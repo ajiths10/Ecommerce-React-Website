@@ -6,21 +6,24 @@ import './ItemList.css';
 const ItemList = (props) => {
 const CTX = useContext(CartContext);
 
+const data = {
+  id:props.id,
+  title: props.title,
+  URL: props.URL,
+  quantity: props.quantity,
+  price:props.price,
+}
+
 const BtnHandler = ()=>{
-  const data = {
-    id:props.id,
-    title: props.title,
-    URL: props.URL,
-    quantity: props.quantity,
-    price:props.price,
-  }
   CTX.AddtoButtonHandler(data);
 }
 
+
+
   return <div>
   <div className="indLIst">
-  <Link to="./Store/p1">
-      <h3>{`Album ${props.num}`}</h3>
+  <Link to={`./Store/p${props.id}`}>
+      <h3 >{`Album ${props.num}`}</h3>
       <img src={props.URL} />
       </Link> </div> 
       <div className='priceAndButton'>

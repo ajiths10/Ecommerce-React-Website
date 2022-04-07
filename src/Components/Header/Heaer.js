@@ -14,6 +14,7 @@ const Header = (props) => {
             <NavLink to='/Store' className='titlelabels'> Store</NavLink>
             <NavLink to='/About' className='titlelabels'> About</NavLink>
             <NavLink to='/contactus' className='titlelabels'> Contact Us</NavLink>
+            <NavLink to='/userlogin' className='titlelabels'> Login </NavLink>
             <div>
             <button className='cart-button' onClick={props.onClick} >Cart</button>
             {CTX.count}

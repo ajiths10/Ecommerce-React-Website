@@ -11,6 +11,7 @@ import Footer from "./Components/Footer/Footer";
 import Home from "./Pages/Home/Home";
 import ContactForm from "./Pages/ContactUs/ContactForm";
 import ItemPage from "./Pages/SubPages/ItemPage";
+import AuthForm from "./Pages/Auth/AuthForm";
 
 function App() {
   const [Cartstate, setCartState] = useState(false);
@@ -22,6 +23,7 @@ function App() {
   const cartFalseHandler = () => {
     setCartState(false);
   };
+
 
   return (
     <CartProvider>
@@ -46,7 +48,10 @@ function App() {
       </Route>
 
       <Route path="/Store/:productId">
-        <ItemPage />
+        <ItemPage  />
+      </Route>
+      <Route path='/userlogin'>
+        <AuthForm />
       </Route>
       </Switch>
       <Footer />
