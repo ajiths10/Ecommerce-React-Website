@@ -56,7 +56,7 @@ const AuthForm = () => {
       }
     }else{
       setLoading(true);
-      const res =  await    fetch(
+      const res =  await  fetch(
         "https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyDYvgMIyWWmOzJ3IXis-uRWEguL3xNOPww",
         {
           method: "POST",

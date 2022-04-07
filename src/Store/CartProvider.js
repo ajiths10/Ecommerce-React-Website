@@ -1,17 +1,48 @@
 import React, { useEffect, useState } from "react";
 import CartContext from "./Cart--context";
+import axios from 'axios';
 
 const CartProvider = (props) => {
 const [items,UpdateNewItems] = useState([]) ;
 const [amountState, setAmount] = useState('');
 const [loginState, setLoginState] =useState(false);
 
-let newSubArray = [...items];
+
+const userStoredID = localStorage.getItem('userID');
+let newSubArray=[...items]
+
+const cartReloadHandler = async() =>{
+    try{
+        const cloudData = await axios.get(`https://crudcrud.com/api/c8bbd3d56bb84a5d853f9ba1ec7a8a7a/cart${userStoredID}`);
+        let newCloudArray = [...cloudData.data];
+        let newCloudArrayCopy = [...cloudData.data];
+        let isAgain =false;
+        console.log(newCloudArrayCopy.length);
+
+        
+
+         for(let i= 0; i <= newCloudArray.length;i++){
+            for(let j=i+1; j< newCloudArray.length;j++){
+                if(newCloudArray[i].id===newCloudArray[j].id){
+                   newCloudArray[i].quantity=newCloudArray[i].quantity+1;
+                        newCloudArray.splice(j,1);
+                            // delete newCloudArray[j];
+                }
+            }
+        }
+        
+        UpdateNewItems(newCloudArray);
+        console.log(newCloudArray);
+    }catch(err){
+        console.log('something went wrong');
+    }
+}
+useEffect(cartReloadHandler,[]);
+
 
     const AddToCart= (item) => {
 
         let sameItem=false;
-
         newSubArray.forEach((element,index) => {
             if(item.id===element.id){
                 sameItem=true;
@@ -27,7 +58,7 @@ let newSubArray = [...items];
 
     const removeBtnHandler = (id) => {
         console.log(`id:${id} Removing...`);
-        console.log(newSubArray);
+        
         newSubArray.forEach((element,index) => {
             if(id == element.id){
                 newSubArray.splice(index,1);

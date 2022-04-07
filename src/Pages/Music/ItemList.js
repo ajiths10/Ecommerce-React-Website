@@ -22,21 +22,8 @@ const BtnHandler = async(event)=>{
 
   CTX.AddtoButtonHandler(data);
 try{ 
-  const response = await fetch(`https://crudcrud.com/api/25ed1372ef22486e91a8a553b6182b32/cart${userToken}`,
-  {
-    headers: { "Content-Type": "application/json" },
-    
-    method: 'POST',
-    body: JSON.stringify({
-      "id":props.id,
-      "title": props.title,
-      "URL": props.URL,
-      "quantity": props.quantity,
-      "price":props.price,
-    })
-  }
-  );
-  console.log(JSON.stringify(response));
+  const response = await axios.post(`https://crudcrud.com/api/c8bbd3d56bb84a5d853f9ba1ec7a8a7a/cart${userToken}`,data);
+  console.log(response);
 }catch(err){
   console.log(`Something went wrong!!`);
 }
