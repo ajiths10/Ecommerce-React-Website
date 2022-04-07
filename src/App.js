@@ -24,8 +24,10 @@ function App() {
   const cartFalseHandler = () => {
     setCartState(false);
   };
-const isLogin =CTX.isLogin;
+  const isLogin =CTX.isLogin;
 
+  const localData = localStorage.getItem('JWTTOKEN');
+  console.log(localData); 
 
   return (
     <Fragment>
