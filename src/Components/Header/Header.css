@@ -91,6 +91,7 @@
     height: 30px;
     width: 80px;
     font-weight: bold; 
+    
 }
 .cart-button:hover{
 background-color: #56CCF2;
@@ -100,8 +101,10 @@ text-align: center;
 
 .cartClassbtn{   
     margin-top: -40px;
-    height: 30px;
-    width: 1400px;
+    height: 5px;
+    margin-left: 1250px;
+    width: 50px;
+    
 }
 .logout-Button{
     height: 30px;

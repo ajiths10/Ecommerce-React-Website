@@ -1,17 +1,18 @@
-import React, { useState, useContext, Fragment } from "react";
+import React, { useState, useContext, Fragment, Suspense } from "react";
 import { Redirect, Route , Switch } from "react-router-dom";
 import Cart from "./Components/Cart/Cart";
 
 import Header from "./Components/Header/Heaer";
-import MainHeading from "./Components/MainHeading/MainHeading";
-import MusicHome from "./Pages/Music/MusicHome";
-import About from "./Pages/About/About";
 import CartContext from "./Store/Cart--context";
 import Footer from "./Components/Footer/Footer";
-import Home from "./Pages/Home/Home";
-import ContactForm from "./Pages/ContactUs/ContactForm";
-import ItemPage from "./Pages/SubPages/ItemPage";
 import AuthForm from "./Pages/Auth/AuthForm";
+
+const MusicHome = React.lazy(()=>import ("./Pages/Music/MusicHome"));
+const About = React.lazy(()=>import("./Pages/About/About"));
+const Home = React.lazy(()=>import("./Pages/Home/Home"));
+const ContactForm = React.lazy(()=>import('./Pages/ContactUs/ContactForm'));
+const ItemPage = React.lazy(()=>import('./Pages/SubPages/ItemPage'));
+const MainHeading = React.lazy(()=>import('./Components/MainHeading/MainHeading'))
 
 function App() {
   const [Cartstate, setCartState] = useState(false);
@@ -32,6 +33,7 @@ function App() {
 
   return (
     <Fragment>
+      <Suspense fallback={<div><h3>Loading...</h3></div>}>
       {Cartstate && <Cart onClick={cartFalseHandler} />}
       <Header onClick={cartHandler} />
       <MainHeading />
@@ -68,6 +70,7 @@ function App() {
       </Route>
       </Switch>
       <Footer />
+      </Suspense>
       </Fragment>
   );
 }
