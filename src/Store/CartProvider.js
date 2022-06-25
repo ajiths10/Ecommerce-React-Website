@@ -13,32 +13,13 @@ let newSubArray=[...items]
 
 const cartReloadHandler = async() =>{
     try{
-        const cloudData = await axios.get(`https://crudcrud.com/api/fed7171d9c8c42388b32ef4ac9bb2258/cart${userStoredID}`);
-        let newCloudArray = [...cloudData.data];
-        let newCloudArrayCopy = [...cloudData.data];
-        let isAgain =false;
-        console.log(newCloudArray)
-        console.log(newCloudArrayCopy.length);
+        const cloudData = await axios.get(`http://localhost:4000/cart`);
+        let newCloudArray = cloudData.data;
 
-        
-
-         for(let i= 0; i <= newCloudArray.length;i++){
-            for(let j=i+1; j< newCloudArray.length;j++){
-                if(newCloudArray[i].id===newCloudArray[j].id){
-                   newCloudArray[i].quantity=newCloudArray[i].quantity+1;
-                }
-            }
-        }
-        for(let m= 0; m <= newCloudArray.length;m++){
-            for(let n=m+1; n< newCloudArray.length;n++){
-                if(newCloudArray[m].id===newCloudArray[n].id){
-                        newCloudArray.splice(n,1);
-                }
-            }
-        }
-
-
-
+        newCloudArray.map(item => {
+            item.URL = item.imageUrl;
+            item.quantity = item.cartItem.quantity;
+        })
         
         UpdateNewItems(newCloudArray);
         console.log(newCloudArray);
