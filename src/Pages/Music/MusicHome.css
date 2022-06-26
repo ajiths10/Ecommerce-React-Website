@@ -18,3 +18,19 @@
     margin-left: 21%;
 
 }
+.pagination-container{
+    margin-top: 50px;
+}
+.paginationBtn {
+    border: 1px;
+    background-color: rgb(84, 139, 194);
+    font-weight: bold;
+    color: white;
+    height: 25px;
+    width: 30px;
+    margin: .4rem;
+    font-size: .7rem;
+}
+button {
+    font-family: "poppins", sans-serif;
+}

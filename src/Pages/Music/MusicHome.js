@@ -45,10 +45,10 @@ const getProducts = async(value) => {
           );
         })}
       </div>
-      <div>
-        <button onClick={previousProducts}> {'<'} </button>
-        <button>{productsArr.currentPage}</button>
-        <button onClick={nextProducts}> {'>'} </button>
+      <div className="pagination-container">
+        <button className="paginationBtn" onClick={previousProducts}> {'<'} </button>
+        <button className="paginationBtn">{productsArr.currentPage}</button>
+        <button className="paginationBtn" onClick={nextProducts}> {'>'} </button>
       </div>
     </div>
   );

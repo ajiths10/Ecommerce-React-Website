@@ -6,12 +6,14 @@ text-align: center;
 
 .priceAndButton{
     text-align: left;
+    font-family: "poppins", sans-serif;
     margin-top: 10px;
     margin-left: -10px;
 }
 
 .listButton{
     background-color: aqua;
+    font-family: "poppins", sans-serif;
     color: white;
     border: 0ch;
     width:103px;
