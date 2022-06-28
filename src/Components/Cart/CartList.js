@@ -1,3 +1,4 @@
+import axios from 'axios';
 import { useContext } from 'react';
 import CartContext from '../../Store/Cart--context';
 import './CartList.css';
@@ -5,9 +6,18 @@ import './CartList.css';
 const CartList= (props) => {
     const CTX = useContext(CartContext);
     
-    const removeHandler = (event)=>{
-        event.preventDefault();
-        CTX.removeHandler(props.id)
+    const removeHandler = async(event)=>{
+        event.preventDefault(); 
+
+        try {
+            const response = await axios.post(`http://localhost:4000/cart-delete-item`, {
+              productId: props.id,
+            });
+            console.log(response);
+            CTX.removeHandler(props.id)
+          } catch (err) {
+            console.log(`Something went wrong!!`);
+          }
     }
 
     return(<div>
