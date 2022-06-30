@@ -1,17 +1,33 @@
-import React from "react";
-import './order.css'
+import React, { useEffect, useState } from "react";
+import ListView from "./ListView";
+import "./order.css";
 
 const OrderComp = (props) => {
-    console.log(props.OrderArr)
-    return (
-        <div className="order-comp">
-            <h3>Success</h3>
-            <hr />
-            <label>Order placed at: {props.OrderArr.createdAt}</label>
-            <br></br>
-            <label>Order Id: {props.OrderArr.id}</label>
-        </div>
-    )
-}
+  const [productArr, setProductArr] = useState([]);
+
+  console.log(props.OrderArr);
+  useEffect(() => {
+    setProductArr(props.OrderArr);
+  }, [props]);
+  return (
+    <div className="order-comp">
+      <h3 className="success">Success</h3>
+      <hr />
+      <div className="details-container">
+        <label>
+          Order placed at:{" "}
+          <span> {productArr?.createdAt ? productArr.createdAt : null} </span>{" "}
+        </label>
+        <br></br>
+        <label className="orderId">
+          Order Id:<span> {productArr?.id ? productArr.id : null} </span>{" "}
+        </label>
+      </div>
+      {productArr?.products?.map((data) => {
+        return <ListView data={data} />;
+      })}
+    </div>
+  );
+};
 
 export default OrderComp;

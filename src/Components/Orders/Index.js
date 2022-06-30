@@ -21,14 +21,14 @@ const Order = () => {
   }, []);
 
   return (
-    <>
-      <h2>Yours Order</h2>
+    <div className="mainOrder-container">
+      <h2 >Yours Order</h2>
       <div className="order-container">
         {OrderArr.map((element) => (
           <OrderComp OrderArr={element} />
         ))}
       </div>
-    </>
+    </div>
   );
 };
 
