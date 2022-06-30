@@ -3,12 +3,18 @@
     display: flex;
     justify-content: center;
     align-items: center; 
+    flex-flow: column;
+   margin: 1rem;
 }
+
 .order-comp{
     border: solid;
     border-radius: 5px;
     border-width: 1px;
     border-color: rgb(189, 187, 187);
    width: 100vh;
-   height: 30vh;
+   margin: 1rem;
+   height:auto;
+   padding: 2rem;
+   background-color: rgb(235, 237, 239);
 }
