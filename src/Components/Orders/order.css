@@ -1,0 +1,14 @@
+.order-container {
+    /* z-index: 1; */
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+.order-comp{
+    border: solid;
+    border-radius: 5px;
+    border-width: 1px;
+    border-color: rgb(189, 187, 187);
+   width: 100vh;
+   height: 30vh;
+}

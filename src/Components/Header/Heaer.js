@@ -20,6 +20,7 @@ const Header = (props) => {
             <NavLink to='/Store' className='titlelabels'> Store</NavLink>
             <NavLink to='/About' className='titlelabels'> About</NavLink>
             <NavLink to='/contactus' className='titlelabels'> Contact Us</NavLink>
+           {CTX.isLogin && <NavLink to='/orders' className='titlelabels'> Orders </NavLink>}
            {!CTX.isLogin && <NavLink to='/userlogin' className='titlelabels'> Login </NavLink>}
            {CTX.isLogin && <div className='logout-BTN'> <button className='logout-Button'  onClick={logoutHandler} >LogOut</button></div> } 
             

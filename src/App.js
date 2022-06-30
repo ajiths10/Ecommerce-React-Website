@@ -6,6 +6,7 @@ import Header from "./Components/Header/Heaer";
 import CartContext from "./Store/Cart--context";
 import Footer from "./Components/Footer/Footer";
 import AuthForm from "./Pages/Auth/AuthForm";
+import Order from "./Components/Orders/Index";
 
 const MusicHome = React.lazy(()=>import ("./Pages/Music/MusicHome"));
 const About = React.lazy(()=>import("./Pages/About/About"));
@@ -49,6 +50,10 @@ function App() {
 
       <Route path="/Home">
         <Home />
+      </Route>
+
+      <Route path="/orders">
+        <Order />
       </Route>
 
       <Route path="/contactus">

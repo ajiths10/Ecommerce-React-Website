@@ -47,6 +47,7 @@
     .titlediv{    
         font-size: 18px;
         font-weight: 200;
+        padding: 1rem;
     }
     .titlelabels{
         cursor: pointer;
@@ -69,11 +70,14 @@
     align-content: center;
     color: white;
     font-weight: bold;
+    text-decoration: none;
+    margin: 1rem;
+    padding: 1rem;
 }
 .logout-BTN{
    
     margin-left: 1400px;
-    margin-top: -30px;
+    margin-top: -35px;
     padding-top: 20px;
     width: 100px;
     
