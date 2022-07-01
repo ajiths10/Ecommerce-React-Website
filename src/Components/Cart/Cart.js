@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import CartContext from "../../Store/Cart--context";
 import CartList from "./CartList";
 import "./Cart.css";
@@ -6,12 +6,14 @@ import axios from "axios";
 
 const Cart = (props) => {
   const CTX = useContext(CartContext);
+  const { cartResponseHAndler, cartResponse } = CTX;
 
   const checkoutHandler = async (e) => {
     e.preventDefault();
     try {
       const response = await axios.post(`http://localhost:4000/checkout`);
       console.log(response);
+      cartResponseHAndler(response.data);
       alert("sucess");
     } catch (err) {
       console.log(`Something went wrong!!`);
