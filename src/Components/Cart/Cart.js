@@ -1,13 +1,13 @@
 import React, { useContext, useEffect } from "react";
 import CartContext from "../../Store/Cart--context";
 import CartList from "./CartList";
-import { useSnackbar } from 'notistack';
+import { useSnackbar } from "notistack";
 import "./Cart.css";
 import axios from "axios";
 
 const Cart = (props) => {
   const CTX = useContext(CartContext);
-  const { enqueueSnackbar } = useSnackbar()
+  const { enqueueSnackbar } = useSnackbar();
   const { cartResponseHAndler, cartResponse } = CTX;
 
   const checkoutHandler = async (e) => {
@@ -16,12 +16,18 @@ const Cart = (props) => {
       const response = await axios.post(`http://localhost:4000/checkout`);
       console.log(response);
       cartResponseHAndler(response.data);
-      enqueueSnackbar("Added successfull", {
-         variant: "success",
-        anchorOrigin: { vertical: 'bottom', horizontal: 'left' },
+      enqueueSnackbar("Order Placed Successfull", {
+        variant: "success",
+        anchorOrigin: { vertical: "bottom", horizontal: "left" },
         preventDuplicate: true,
-    })
+      });
     } catch (err) {
+      enqueueSnackbar("Something went wrong", {
+        variant: "error",
+        anchorOrigin: { vertical: "bottom", horizontal: "left" },
+        preventDuplicate: true,
+      }
+      );
       console.log(`Something went wrong!!`);
     }
   };

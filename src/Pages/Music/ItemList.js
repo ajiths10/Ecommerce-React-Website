@@ -1,12 +1,13 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
-
+import { useSnackbar } from "notistack";
 import CartContext from "../../Store/Cart--context";
 import "./ItemList.css";
 
 const ItemList = (props) => {
   const CTX = useContext(CartContext);
+  const { enqueueSnackbar } = useSnackbar();
 
   const data = {
     id: props.id,
@@ -25,7 +26,17 @@ const ItemList = (props) => {
         productId: data.id,
       });
       console.log(response);
+      enqueueSnackbar("Item added to cart", {
+        variant: "success",
+        anchorOrigin: { vertical: "bottom", horizontal: "left" },
+        //preventDuplicate: true,
+      });
     } catch (err) {
+      enqueueSnackbar("Something went wrong", {
+        variant: "error",
+        anchorOrigin: { vertical: "bottom", horizontal: "left" },
+        //preventDuplicate: true,
+      });
       console.log(`Something went wrong!!`);
     }
   };
