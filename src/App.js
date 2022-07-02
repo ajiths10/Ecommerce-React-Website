@@ -1,7 +1,7 @@
 import React, { useState, useContext, Fragment, Suspense } from "react";
 import { Redirect, Route , Switch } from "react-router-dom";
 import Cart from "./Components/Cart/Cart";
-
+import { SnackbarProvider } from 'notistack'
 import Header from "./Components/Header/Heaer";
 import CartContext from "./Store/Cart--context";
 import Footer from "./Components/Footer/Footer";
@@ -34,6 +34,7 @@ function App() {
 
   return (
     <Fragment>
+      <SnackbarProvider maxSnack={3} >
       <Suspense fallback={<div><h3>Loading...</h3></div>}>
       {Cartstate && <Cart onClick={cartFalseHandler} />}
       <Header onClick={cartHandler} />
@@ -74,8 +75,10 @@ function App() {
         {!isLogin && <Redirect to='/userlogin'></Redirect>}
       </Route>
       </Switch>
+      
       <Footer />
       </Suspense>
+      </SnackbarProvider>
       </Fragment>
   );
 }
