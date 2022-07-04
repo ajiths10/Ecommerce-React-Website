@@ -12,24 +12,33 @@ const Cart = (props) => {
 
   const checkoutHandler = async (e) => {
     e.preventDefault();
-    try {
-      const response = await axios.post(`http://localhost:4000/checkout`);
-      console.log(response);
-      cartResponseHAndler(response.data);
-      enqueueSnackbar("Order Placed Successfull", {
-        variant: "success",
-        anchorOrigin: { vertical: "bottom", horizontal: "left" },
-        preventDuplicate: true,
-      });
-    } catch (err) {
-      enqueueSnackbar("Something went wrong", {
+    if(CTX.items.length){
+      try {
+        const response = await axios.post(`http://localhost:4000/checkout`);
+        console.log(response);
+        cartResponseHAndler(response.data);
+        enqueueSnackbar("Order Placed Successfull", {
+          variant: "success",
+          anchorOrigin: { vertical: "bottom", horizontal: "left" },
+          preventDuplicate: true,
+        });
+      } catch (err) {
+        enqueueSnackbar("Something went wrong", {
+          variant: "error",
+          anchorOrigin: { vertical: "bottom", horizontal: "left" },
+          preventDuplicate: true,
+        }
+        );
+        console.log(`Something went wrong!!`);
+      }
+    }
+    else{
+      enqueueSnackbar("Cart is empty!", {
         variant: "error",
         anchorOrigin: { vertical: "bottom", horizontal: "left" },
-        preventDuplicate: true,
+        //preventDuplicate: true,
+      })
       }
-      );
-      console.log(`Something went wrong!!`);
-    }
   };
 
   const cartListItems = CTX.items.map((element) => {
