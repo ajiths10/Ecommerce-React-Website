@@ -4,15 +4,16 @@ import CartList from "./CartList";
 import { useSnackbar } from "notistack";
 import "./Cart.css";
 import axios from "axios";
+import { useHistory } from "react-router-dom";
 
 const Cart = (props) => {
   const CTX = useContext(CartContext);
   const { enqueueSnackbar } = useSnackbar();
   const { cartResponseHAndler, cartResponse } = CTX;
-
+  const history = useHistory();
   const checkoutHandler = async (e) => {
     e.preventDefault();
-    if(CTX.items.length){
+    if (CTX.items.length) {
       try {
         const response = await axios.post(`http://localhost:4000/checkout`);
         console.log(response);
@@ -22,23 +23,22 @@ const Cart = (props) => {
           anchorOrigin: { vertical: "bottom", horizontal: "left" },
           preventDuplicate: true,
         });
+        history.push("/orders");
       } catch (err) {
         enqueueSnackbar("Something went wrong", {
           variant: "error",
           anchorOrigin: { vertical: "bottom", horizontal: "left" },
           preventDuplicate: true,
-        }
-        );
+        });
         console.log(`Something went wrong!!`);
       }
-    }
-    else{
+    } else {
       enqueueSnackbar("Cart is empty!", {
         variant: "error",
         anchorOrigin: { vertical: "bottom", horizontal: "left" },
         //preventDuplicate: true,
-      })
-      }
+      });
+    }
   };
 
   const cartListItems = CTX.items.map((element) => {
