@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import ListView from "./ListView";
 import "./order.css";
+import moment from "moment";
 
 const OrderComp = (props) => {
   const [productArr, setProductArr] = useState([]);
@@ -26,7 +27,7 @@ const OrderComp = (props) => {
       <div className="details-container">
         <label>
           Order placed at:{" "}
-          <span> {productArr?.createdAt ? productArr.createdAt : null} </span>{" "}
+          <span> {productArr?.createdAt ?  moment(productArr.createdAt ).format(' h:mm:ss a, MMMM YYYY') : null} </span>{" "}
         </label>
         <br></br>
         <label className="orderId">
