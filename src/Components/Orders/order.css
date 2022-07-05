@@ -58,3 +58,8 @@ label{
 span {
     font-weight: bold;
 }
+.totalamount{
+    margin-left: auto;
+    font-weight: bold;
+    font-size: 22px;
+}

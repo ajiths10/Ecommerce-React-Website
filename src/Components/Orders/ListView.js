@@ -2,7 +2,6 @@ import React from "react";
 import "./order.css";
 
 const ListView = (props) => {
-  console.log(props.data);
 
   return (
     <div className="listView-container">

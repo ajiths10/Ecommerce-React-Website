@@ -4,11 +4,21 @@ import "./order.css";
 
 const OrderComp = (props) => {
   const [productArr, setProductArr] = useState([]);
+  const [totalState, setTotalState] = useState(0);
+  let totalAmount = 0;
 
-  console.log(props.OrderArr);
   useEffect(() => {
     setProductArr(props.OrderArr);
   }, [props]);
+
+  useEffect(() => {
+    productArr?.products?.map((item) => {
+      totalAmount = totalAmount + item.price;
+      console.log("hiii", item);
+    });
+    setTotalState(totalAmount);
+  }, [productArr]);
+
   return (
     <div className="order-comp">
       <h3 className="success">Success</h3>
@@ -26,6 +36,9 @@ const OrderComp = (props) => {
       {productArr?.products?.map((data) => {
         return <ListView data={data} />;
       })}
+      <div className="details-container">
+      <label className="totalamount">Total Amount: {totalState}</label>
+      </div>
     </div>
   );
 };
